@@ -9,7 +9,9 @@ app.use(exp.json())
 
 app.get('/conectar', async (req, res) => {
     const consulta = await modeloProducto.find({});
-    console.log(consulta)
+    if (consulta):
+        res.status(200).json(consulta)
+
 });
 
 app.get('/Producto/:ref', async (req,res)=>{
